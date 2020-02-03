@@ -1,4 +1,4 @@
-package cucumber;
+package cucumber.stepdefs;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -57,4 +57,8 @@ public class WebLoginStepDefinitions  {
     }
 
 
+    @Given("I am on the facebook Home Page one")
+    public void iAmOnTheFacebookHomePageOne() {
+
+    }
 }
