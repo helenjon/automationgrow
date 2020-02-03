@@ -1,38 +1,38 @@
 package cucumber;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import helpers.CreateDriver;
 import pageobjects.WebLoginPage;
 
 import org.openqa.selenium.WebDriver;
 
 public class WebLoginStepDefinitions  {
 
-    private WebLoginPage webLoginPage = null;
+    private WebLoginPage webLoginPage ;
     private  WebDriver driver;
 
 
-    @Before
-    public void beforeScenario() throws Exception {
 
+
+//    @Given("^I am on the facebook.com Home Page$")
+//    public void iAmOnFBHomePage() {
+//        CreateDriver driverChrome = new CreateDriver() ;
+//        driver = driverChrome.createDriver();
+//        driver.get("http://facebook.com");
+//        webLoginPage = new WebLoginPage(driver);
+//    }
+
+    @Given("^I am on the facebook\\.com Home Page test$")
+    public void i_am_on_the_facebook_com_Home_Page_test() {
         CreateDriver driverChrome = new CreateDriver() ;
         driver = driverChrome.createDriver();
-
         driver.get("http://facebook.com");
         webLoginPage = new WebLoginPage(driver);
-    }
-
-    @After
-    public void afterScenario() {
-        driver.quit();
-    }
-
-    @Given("^I am on the facebook.com Home Page$")
-    public void iAmOnFBHomePage() {
+        // Write code here that turns the p
+        // hrase above into concrete actions
 
     }
 
@@ -55,5 +55,6 @@ public class WebLoginStepDefinitions  {
     public void logincheck() {
         webLoginPage.logincheck();
     }
+
 
 }
